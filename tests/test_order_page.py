@@ -15,8 +15,8 @@ class TestOrderPage:
         main_page.main_url()
         main_page.get_cookie()
         main_page.click_header_order_button()
-        order_page.open_who_is_scooter_for_page()
-        order_page.open_about_rent_page()
+        order_page.fill_info_who_is_scooter_for_page()
+        order_page.fill_info_about_rent_for_page()
         assert order_page.find_text(OrderPageLocators.VIEW_STATUS_BUTTON_IN_MODAL_WINDOW) == ExpectedText.look_status, 'Нет подтверждения, что заказ оформлен'
 
     @allure.title('Проверка оформления заказа через кнопку "Заказать" в body')
@@ -27,6 +27,6 @@ class TestOrderPage:
         main_page.main_url()
         main_page.get_cookie()
         main_page.click_to_order_body_button()
-        order_page.open_who_is_scooter_for_page()
-        order_page.open_about_rent_page()
+        order_page.fill_info_who_is_scooter_for_page()
+        order_page.fill_info_about_rent_for_page()
         assert order_page.find_text(OrderPageLocators.VIEW_STATUS_BUTTON_IN_MODAL_WINDOW) == ExpectedText.look_status, 'Нет подтверждения, что заказ оформлен'

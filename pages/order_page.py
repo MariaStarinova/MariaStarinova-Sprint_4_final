@@ -52,13 +52,13 @@ class OrderPage(BasePage):
         self.click_element(OrderPageLocators.YES_ORDER_BUTTON_MODAL)
 
     @allure.step('Открыть страницу "Для кого самокат" и заполнить данными для заказа')
-    def open_who_is_scooter_for_page(self):
+    def fill_info_who_is_scooter_for_page(self):
         self.enter_info()
         self.choose_metro_station()
         self.click_next_button()
 
     @allure.step('Открыть страницу "Про аренду" и заполнить данными для заказа')
-    def open_about_rent_page(self):
+    def fill_info_about_rent_for_page(self):
         self.choose_date()
         self.choose_rent_period()
         self.choose_color()

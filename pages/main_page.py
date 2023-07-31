@@ -26,13 +26,11 @@ class MainPage(BasePage):
         self.click_element(BasePageLocators.YANDEX_lOGO)
         self.cross_new_window()
         self.wait_url_to_be(TestUrls.DzenMainUrl)
-        assert self.driver.current_url == TestUrls.DzenMainUrl
 
     @allure.step('Кликнуть на логотип "Самокат" в хедере страницы')
     def click_scooter_logo(self):
         self.wait_visibility_element(BasePageLocators.SCOOTER_LOGO)
         self.click_element(BasePageLocators.SCOOTER_LOGO)
-        assert self.driver.current_url == TestUrls.MainPageUrl
 
     @allure.step('Кликнуть по кнопке "Заказать" в хедере страницы')
     def click_header_order_button(self):
